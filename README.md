@@ -7,3 +7,7 @@
    <img width="695" alt="Capture d’écran 2022-10-18 121600" src="https://user-images.githubusercontent.com/92895971/196480347-b4138bb4-139d-45ca-963c-5964a8255539.png"><br>
 ***LOGO***<br>
 <img width="427" alt="Capture d’écran 2022-10-18 110744" src="https://user-images.githubusercontent.com/92895971/196480650-55d3f9ba-a50d-4124-8d80-a3079f026c47.png">
+
+[- 📫 How to reach me **Achchaima1@gmail.com**]()
+
+[- 📫  **Linkedin achchaimae khalaf**](https://www.linkedin.com/in/achchaimae-khalaf-335a86233/)
