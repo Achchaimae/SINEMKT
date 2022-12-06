@@ -1,5 +1,5 @@
 <?php
-include_once 'DataBase.php';
+include_once PROJ_DIR . "/classes/dbh.class.php";
 class LoginModel extends dbh{
 
     public function checkLogin($login,$password){
