@@ -4,7 +4,7 @@ class LoginModel extends dbh{
 
     public function checkLogin($login,$password){
 
-        $sql = "SELECT * FROM ADMIN WHERE login=? and password = '$password'";
+        $sql = "SELECT * FROM admin WHERE login=? and password = '$password'";
         //connect do the connection with db
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute([$login]); 

@@ -146,7 +146,7 @@
 				                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
 				                    <i class="fa fa-bars"></i>
 				                </button>
-				                <a class="navbar-brand" href="index.html"><img src="./../assets/logo/BrandLogo.png" width="90"></a>
+				                <a class="navbar-brand" href="index.php"><img src="./../assets/logo/BrandLogo.png" width="90"></a>
 
 				            </div><!--/.navbar-header-->
 				            <!-- End Header Navigation -->
@@ -154,10 +154,10 @@
 				            <!-- Collect the nav links, forms, and other content for toggling -->
 				            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
 				                <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
-                                    <li ><a href="./index.html">home</a></li>
-				                    <li ><a href="./NewArrival.html">new arrival</a></li>
+                                    <li ><a href="./home.php">home</a></li>
+				                    <li ><a href="./NewArrival.php">new arrival</a></li>
 				                    <li ><a href="#feature">features</a></li>
-				                    <li ><a href="./Blog.html">blog</a></li>
+				                    <li ><a href="./Blog.php">blog</a></li>
 				                    <li class="scroll"><a href="#newsletter">contact</a></li>
 				                </ul><!--/.nav -->
 				            </div><!-- /.navbar-collapse -->

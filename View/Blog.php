@@ -212,8 +212,8 @@
                 >
                   <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.html"
-                  ><img src="../../assets/logo/BrandLogo.png" width="90"
+                <a class="navbar-brand" href="home.php"
+                  ><img src="../assets/logo/BrandLogo.png" width="90"
                 /></a>
               </div>
               <!--/.navbar-header-->
@@ -229,9 +229,9 @@
                   data-in="fadeInDown"
                   data-out="fadeOutUp"
                 >
-                  <li><a href="./index.html">home</a></li>
-                  <li><a href="./NewArrival.html">new arrival</a></li>
-                  <li><a href="./Features.html">features</a></li>
+                  <li><a href="./home.php">home</a></li>
+                  <li><a href="./NewArrival.php">new arrival</a></li>
+                  <li><a href="./Features.php">features</a></li>
                   <li><a href="#blog">blog</a></li>
                   <li class="scroll"><a href="#newsletter">contact</a></li>
                 </ul>
