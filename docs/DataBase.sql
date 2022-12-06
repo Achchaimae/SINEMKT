@@ -7,7 +7,7 @@ login varchar(100),
 password text
 );
 
-create table poduit(
+create table produit(
 id int not null auto_increment primary key,
 nom varchar(100),
 prix int,
