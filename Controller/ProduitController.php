@@ -1,5 +1,5 @@
 <?php
-include_once PROJ_DIR . "/models/ProduitModel.php";
+include_once PROJ_DIR . "/Model/ProduitModel.php";
 
 class ProduitController{
     protected $produit;

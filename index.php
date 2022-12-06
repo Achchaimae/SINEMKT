@@ -3,9 +3,9 @@ define("PROJ_DIR", dirname(__FILE__));
 
 
 session_start();
-include_once PROJ_DIR . "/models/ProduitModel.php";
-include_once PROJ_DIR . "/models/LoginModel.php";
-include_once PROJ_DIR . "/controllers/ProduitController.php";
+include_once PROJ_DIR . "/Model/ProduitModel.php";
+include_once PROJ_DIR . "/Model/LoginModel.php";
+include_once PROJ_DIR . "/Controller/ProduitController.php";
 
 $ProduitController = new ProduitController();
 $LoginModel = new LoginModel();

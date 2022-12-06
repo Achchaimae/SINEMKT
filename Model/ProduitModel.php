@@ -1,5 +1,5 @@
 <?php
-include_once PROJ_DIR . "/classes/dbh.class.php";
+include_once PROJ_DIR . "/classes/DataBase.php";
 class Produit extends dbh{
 
     public function AjouterProduit($nom,$prix,$quantite,$description,$image){
