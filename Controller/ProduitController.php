@@ -1,5 +1,6 @@
 <?php
-include_once PROJ_DIR . "/Model/ProduitModel.php";
+include_once 'C:\xampp\htdocs\SINEMKT\Model\ProduitModel.php';
+
 
 class ProduitController{
     protected $produit;

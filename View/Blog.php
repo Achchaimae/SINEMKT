@@ -196,6 +196,9 @@
                       </li>
                     </ul>
                   </li>
+                  <li class="nav-setting">
+				                		<a href="#"><span class="lnr lnr-user"  onclick="login()"></span></a>
+				                	</li>
                   <!--/.dropdown-->
                 </ul>
               </div>
@@ -675,5 +678,8 @@
 
     <!--Custom JS-->
     <script src="../assets/js/custom.js"></script>
+    <!--my JS-->
+    <script src="../assets/js/myscript.js"></script>
+        
   </body>
 </html>

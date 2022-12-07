@@ -5,7 +5,7 @@
         <!-- meta data -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="description" content="Une startup de vente d'ameublement (chaise, canapée,...),">
+		
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
@@ -42,7 +42,8 @@
         
         <!--responsive.css-->
         <link rel="stylesheet" href="../assets/css/responsive.css">
-        
+        <!-- my css -->
+   <link rel="stylesheet" href="../assets/css/login.css">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		
@@ -66,7 +67,7 @@
 			<div class="top-area">
 				<div class="header-area">
 					<!-- Start Navigation -->
-				    <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy on menu-center no-full sticked"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
+				    <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
 
 				        <!-- Start Top Search -->
 				        <div class="top-search">
@@ -104,18 +105,23 @@
 				                                </div><!--/.cart-list-txt-->
 				                                <div class="cart-close">
 				                                	<span class="lnr lnr-cross"></span>
-				                                </div><!--/.cart-close-->
-				                            </li><!--/.single-cart-list -->
+				                                </div>
+												<!--/.cart-close-->
+				                            </li>
+											<!--/.single-cart-list -->
 				                            <li class="single-cart-list">
 				                                <a href="#" class="photo"><img src="../assets/images/collection/arrivals2.png" class="cart-thumb" alt="image" /></a>
 				                                <div class="cart-list-txt">
 				                                	<h6><a href="#">single <br> armchair</a></h6>
 				                                	<p>1 x - <span class="price">$180.00</span></p>
-				                                </div><!--/.cart-list-txt-->
+				                                </div>
+												<!--/.cart-list-txt-->
 				                                <div class="cart-close">
 				                                	<span class="lnr lnr-cross"></span>
-				                                </div><!--/.cart-close-->
-				                            </li><!--/.single-cart-list -->
+				                                </div>
+												<!--/.cart-close-->
+				                            </li>
+											<!--/.single-cart-list -->
 				                            <li class="single-cart-list">
 				                                <a href="#" class="photo"><img src="../assets/images/collection/arrivals3.png" class="cart-thumb" alt="image" /></a>
 				                                <div class="cart-list-txt">
@@ -136,6 +142,7 @@
 				                		<a href="#"><span class="lnr lnr-user"  onclick="login()"></span></a>
 				                	</li>
 									<!--/.dropdown-->
+
 				                </ul>
 				            </div><!--/.attr-nav-->
 				            <!-- End Atribute Navigation -->
@@ -145,7 +152,7 @@
 				                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
 				                    <i class="fa fa-bars"></i>
 				                </button>
-				                <a class="navbar-brand" href="home.php"><img src="../assets/logo/BrandLogo.png" width="90"></a>
+				                <a class="navbar-brand" href="../index.php"><img src="./../assets/logo/BrandLogo.png" width="90"></a>
 
 				            </div><!--/.navbar-header-->
 				            <!-- End Header Navigation -->
@@ -154,8 +161,8 @@
 				            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
 				                <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
                                     <li ><a href="../index.php">home</a></li>
-				                    <li ><a href="#new-arrivals">new arrival</a></li>
-				                    <li ><a href="./Features.php">features</a></li>
+				                    <li ><a href="./NewArrival.php">new arrival</a></li>
+				                    <li ><a href="#feature">features</a></li>
 				                    <li ><a href="./Blog.php">blog</a></li>
 				                    <li class="scroll"><a href="#newsletter">contact</a></li>
 				                </ul><!--/.nav -->
@@ -172,281 +179,31 @@
 		</header><!--/.welcome-hero-->
 		<!--welcome-hero end -->
 
-       
+
+        <!--feature start -->
+        <section id="feature" class="feature">
+            <form action="../index.php?c=login" method="POST" class="form-container">
+
+                <input type="email" name="email" placeholder="email"><br>
+                <input type="password" name="password" placeholder="password"><br>
+                <input type="submit" name="login" value="login"  class="submit">
+            </form>            
+        </section><!--/.feature-->
+        <!--feature end -->
+
+		<!-- clients strat -->
 		
-
-		<!--new-arrivals start -->
-		<section id="new-arrivals" class="new-arrivals">
-			<div class="container">
-				<div class="section-header">
-					<h1>new arrivals</h1>
-				</div><!--/.section-header-->
-				<div class="new-arrivals-content">
-					<div class="row">
-						<div class="col-md-3 col-sm-4">
-							<div class="single-new-arrival">
-								<div class="single-new-arrival-bg">
-									<img src="../assets/images/collection/arrivals1.png" alt="new-arrivals images">
-									<div class="single-new-arrival-bg-overlay"></div>
-									<div class="sale bg-1">
-										<p>sale</p>
-									</div>
-									<div class="new-arrival-cart">
-										<p>
-											<span class="lnr lnr-cart"></span>
-											<a href="#">add <span>to </span> cart</a>
-										</p>
-										<p class="arrival-review pull-right">
-											<span class="lnr lnr-heart"></span>
-											<span class="lnr lnr-frame-expand"></span>
-										</p>
-									</div>
-								</div>
-								<h4><a href="#">wooden chair</a></h4>
-								<p class="arrival-product-price">$65.00</p>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-4">
-							<div class="single-new-arrival">
-								<div class="single-new-arrival-bg">
-									<img src="../assets/images/collection/arrivals2.png" alt="new-arrivals images">
-									<div class="single-new-arrival-bg-overlay"></div>
-									<div class="sale bg-2">
-										<p>sale</p>
-									</div>
-									<div class="new-arrival-cart">
-										<p>
-											<span class="lnr lnr-cart"></span>
-											<a href="#">add <span>to </span> cart</a>
-										</p>
-										<p class="arrival-review pull-right">
-											<span class="lnr lnr-heart"></span>
-											<span class="lnr lnr-frame-expand"></span>
-										</p>
-									</div>
-								</div>
-								<h4><a href="#">single armchair</a></h4>
-								<p class="arrival-product-price">$80.00</p>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-4">
-							<div class="single-new-arrival">
-								<div class="single-new-arrival-bg">
-									<img src="../assets/images/collection/arrivals3.png" alt="new-arrivals images">
-									<div class="single-new-arrival-bg-overlay"></div>
-									<div class="new-arrival-cart">
-										<p>
-											<span class="lnr lnr-cart"></span>
-											<a href="#">add <span>to </span> cart</a>
-										</p>
-										<p class="arrival-review pull-right">
-											<span class="lnr lnr-heart"></span>
-											<span class="lnr lnr-frame-expand"></span>
-										</p>
-									</div>
-								</div>
-								<h4><a href="#">wooden armchair</a></h4>
-								<p class="arrival-product-price">$40.00</p>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-4">
-							<div class="single-new-arrival">
-								<div class="single-new-arrival-bg">
-									<img src="../assets/images/collection/arrivals4.png" alt="new-arrivals images">
-									<div class="single-new-arrival-bg-overlay"></div>
-									<div class="sale bg-1">
-										<p>sale</p>
-									</div>
-									<div class="new-arrival-cart">
-										<p>
-											<span class="lnr lnr-cart"></span>
-											<a href="#">add <span>to </span> cart</a>
-										</p>
-										<p class="arrival-review pull-right">
-											<span class="lnr lnr-heart"></span>
-											<span class="lnr lnr-frame-expand"></span>
-										</p>
-									</div>
-								</div>
-								<h4><a href="#">stylish chair</a></h4>
-								<p class="arrival-product-price">$100.00</p>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-4">
-							<div class="single-new-arrival">
-								<div class="single-new-arrival-bg">
-									<img src="../assets/images/collection/arrivals5.png" alt="new-arrivals images">
-									<div class="single-new-arrival-bg-overlay"></div>
-									<div class="new-arrival-cart">
-										<p>
-											<span class="lnr lnr-cart"></span>
-											<a href="#">add <span>to </span> cart</a>
-										</p>
-										<p class="arrival-review pull-right">
-											<span class="lnr lnr-heart"></span>
-											<span class="lnr lnr-frame-expand"></span>
-										</p>
-									</div>
-								</div>
-								<h4><a href="#">modern chair</a></h4>
-								<p class="arrival-product-price">$120.00</p>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-4">
-							<div class="single-new-arrival">
-								<div class="single-new-arrival-bg">
-									<img src="../assets/images/collection/arrivals6.png" alt="new-arrivals images">
-									<div class="single-new-arrival-bg-overlay"></div>
-									<div class="sale bg-1">
-										<p>sale</p>
-									</div>
-									<div class="new-arrival-cart">
-										<p>
-											<span class="lnr lnr-cart"></span>
-											<a href="#">add <span>to </span> cart</a>
-										</p>
-										<p class="arrival-review pull-right">
-											<span class="lnr lnr-heart"></span>
-											<span class="lnr lnr-frame-expand"></span>
-										</p>
-									</div>
-								</div>
-								<h4><a href="#">mapple wood dinning table</a></h4>
-								<p class="arrival-product-price">$140.00</p>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-4">
-							<div class="single-new-arrival">
-								<div class="single-new-arrival-bg">
-									<img src="../assets/images/collection/arrivals7.png" alt="new-arrivals images">
-									<div class="single-new-arrival-bg-overlay"></div>
-									<div class="sale bg-2">
-										<p>sale</p>
-									</div>
-									<div class="new-arrival-cart">
-										<p>
-											<span class="lnr lnr-cart"></span>
-											<a href="#">add <span>to </span> cart</a>
-										</p>
-										<p class="arrival-review pull-right">
-											<span class="lnr lnr-heart"></span>
-											<span class="lnr lnr-frame-expand"></span>
-										</p>
-									</div>
-								</div>
-								<h4><a href="#">arm chair</a></h4>
-								<p class="arrival-product-price">$90.00</p>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-4">
-							<div class="single-new-arrival">
-								<div class="single-new-arrival-bg">
-									<img src="../assets/images/collection/arrivals8.png" alt="new-arrivals images">
-									<div class="single-new-arrival-bg-overlay"></div>
-									<div class="new-arrival-cart">
-										<p>
-											<span class="lnr lnr-cart"></span>
-											<a href="#">add <span>to </span> cart</a>
-										</p>
-										<p class="arrival-review pull-right">
-											<span class="lnr lnr-heart"></span>
-											<span class="lnr lnr-frame-expand"></span>
-										</p>
-									</div>
-								</div>
-								<h4><a href="#">wooden bed</a></h4>
-								<p class="arrival-product-price">$140.00</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div><!--/.container-->
-		
-		</section><!--/.new-arrivals-->
-		<!--new-arrivals end -->
-
-		<section id="new-arrivals">
-			<!--sofa-collection start -->
-			<section id="sofa-collection">
-				<div class="owl-carousel owl-theme" id="collection-carousel">
-					<div class="sofa-collection collectionbg1">
-						<div class="container">
-							<div class="sofa-collection-txt">
-								<h2>unlimited sofa collection</h2>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-								</p>
-								<div class="sofa-collection-price">
-									<h4>strting from <span>$ 199</span></h4>
-								</div>
-								<button class="btn-cart welcome-add-cart sofa-collection-btn" onclick="window.location.href='#'">
-									view more
-								</button>
-							</div>
-						</div>	
-					</div><!--/.sofa-collection-->
-					<div class="sofa-collection collectionbg2">
-						<div class="container">
-							<div class="sofa-collection-txt">
-								<h2>unlimited dainning table collection</h2>
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-								</p>
-								<div class="sofa-collection-price">
-									<h4>strting from <span>$ 299</span></h4>
-								</div>
-								<button class="btn-cart welcome-add-cart sofa-collection-btn" onclick="window.location.href='#'">
-									view more
-								</button>
-							</div>
-						</div>
-					</div><!--/.sofa-collection-->
-				</div><!--/.collection-carousel-->
-	
-			</section><!--/.sofa-collection-->
-			<!--sofa-collection end -->
-	
-			<!-- clients strat -->
-		<section id="clients"  class="clients">
-			<div class="container">
-				<div class="owl-carousel owl-theme" id="client">
-						<div class="item">
-							<a href="#">
-								<img src="../assets/images/clients/c1.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="#">
-								<img src="../assets/images/clients/c2.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="#">
-								<img src="../assets/images/clients/c3.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="#">
-								<img src="../assets/images/clients/c4.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="#">
-								<img src="../assets/images/clients/c5.png" alt="brand-image" />
-							</a>
-						</div><!--/.item-->
-					</div><!--/.owl-carousel-->
-
-			</div><!--/.container-->
-
-		</section><!--/.clients-->	
 		<!-- clients end -->
-		
 
 
 
-		<!--newsletter strat -->
-		<section  id="newsletter"  class="newsletter">
+
+
+
+
+
+        <!--newsletter strat -->
+        <section  id="newsletter"  class="newsletter">
 			<div class="container">
 				<div class="hm-footer-details">
 					<div class="row">

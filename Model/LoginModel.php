@@ -1,14 +1,14 @@
 <?php
-include_once PROJ_DIR . "/classes/DataBase.php";
+include_once  'C:\xampp\htdocs\SINEMKT\Model\DataBase.php';
 class LoginModel extends dbh{
 
     public function checkLogin($login,$password){
 
-        $sql = "SELECT * FROM admin WHERE login=? and password = '$password'";
+        $sql = "SELECT * FROM admin WHERE login='$login' and password = '$password'";
         //connect do the connection with db
         $stmt = $this->connect()->prepare($sql);
-        $stmt->execute([$login]); 
-        $results = $stmt->fetch();
+        $stmt->execute(); 
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
         if($results){
                         //password & login exist

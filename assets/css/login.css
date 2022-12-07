@@ -1,0 +1,29 @@
+.form-container{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+    margin: 0 auto;
+    padding: 20px;
+    width: 400px;
+    height: 20rem;
+}
+.submit{
+    background-color: #e99c2e;
+    border: 1px solid #e99c2e;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 50%;
+  
+}
+.form-container input{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}

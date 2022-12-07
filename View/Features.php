@@ -136,7 +136,12 @@
 				                                <button class="btn-cart pull-right" onclick="window.location.href='#'">view cart</button>
 				                            </li>
 				                        </ul>
-				                    </li><!--/.dropdown-->
+				                    </li>
+									<li class="nav-setting">
+				                		<a href="#"><span class="lnr lnr-user"  onclick="login()"></span></a>
+				                	</li>
+									<!--/.dropdown-->
+
 				                </ul>
 				            </div><!--/.attr-nav-->
 				            <!-- End Atribute Navigation -->
@@ -586,6 +591,9 @@
         
         <!--Custom JS-->
         <script src="../assets/js/custom.js"></script>
+		<!--my JS-->
+        <script src="../assets/js/myscript.js"></script>
+        
         
     </body>
 	
