@@ -229,7 +229,7 @@
                   data-in="fadeInDown"
                   data-out="fadeOutUp"
                 >
-                  <li><a href="./home.php">home</a></li>
+                  <li><a href="../index.php">home</a></li>
                   <li><a href="./NewArrival.php">new arrival</a></li>
                   <li><a href="./Features.php">features</a></li>
                   <li><a href="#blog">blog</a></li>

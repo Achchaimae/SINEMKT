@@ -149,7 +149,7 @@
 				            <!-- Collect the nav links, forms, and other content for toggling -->
 				            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
 				                <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
-                                    <li ><a href="./home.php">home</a></li>
+                                    <li ><a href="../index.php">home</a></li>
 				                    <li ><a href="#new-arrivals">new arrival</a></li>
 				                    <li ><a href="./Features.php">features</a></li>
 				                    <li ><a href="./Blog.php">blog</a></li>
