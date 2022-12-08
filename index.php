@@ -12,6 +12,7 @@ $LoginModel = new LoginModel();
 $loginController = new LoginController;
 
 
+//test login
 if(isset($_POST["email"])){
 
     $login = $_POST["email"];
@@ -19,18 +20,44 @@ if(isset($_POST["email"])){
     
     
      $loginController-> direction($login,$password);
+
   
     }
+else
+{
+     // password incorrect
+    include_once "View/home.php";
+}
 
-// if (isset($_POST["login"])) {
-//     $login = $_POST["login"];
-//     $password = $_POST["password"];
-//     $LoginModel->checkLogin($login, $password);
-//     header('location: /View/admin.php');
-// }
+
 //login
-//  if(isset($_SESSION["login"])){
-//      if(($_SESSION["login"] === 'achchaimae1@gmail.com')){
+ 
+    if(isset($_POST["ajouter"])){
+         $nom = $_POST["nom"];
+         $prix = $_POST["prix"];
+         $quantite = $_POST["quantite"];
+         $description = $_POST["description"];
+         $image = $_POST["image"];
+         $ProduitController->AjouterProduit($nom,$prix,$quantite,$description,$image);
+        
+    }
+    if(isset($_POST["update"])){
+        $id = $_POST["id"];
+        $nom = $_POST["nom"];
+        $prix = $_POST["prix"];
+        $quantite = $_POST["quantite"];
+        $description = $_POST["description"];
+        $image = $_POST["image"];
+        $ProduitController->updateproduit($id,$nom,$prix,$quantite,$description,$image);
+    }
+    if(isset($_GET["delete"])){
+        $id = $_GET["delete"];
+        $ProduitController->deleteproduit($id);
+    }
+ 
+
+
+
 //login
     
 // if(isset($_SESSION["login"])){
