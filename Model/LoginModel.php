@@ -8,7 +8,6 @@ class LoginModel extends dbh{
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute(); 
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
         return $results;
        
     }

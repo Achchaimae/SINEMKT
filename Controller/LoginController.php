@@ -8,7 +8,6 @@ class LoginController extends LoginModel {
     
 
     public function direction($login,$password){
-        echo "hello";
         $log = new LoginModel();
         $results=$this->checkLogin($login,$password);
         

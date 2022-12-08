@@ -138,7 +138,7 @@
 				                        </ul>
 				                    </li>
 									<li class="nav-setting">
-				                		<a href="#"><span class="lnr lnr-user"  onclick="login()"></span></a>
+				                		<a href="./Login.php"><span class="lnr lnr-user"  ></span></a>
 				                	</li>
 									<!--/.dropdown-->
 
