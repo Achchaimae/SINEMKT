@@ -1,6 +1,6 @@
 <?php
 //login controller
-include 'C:\xampp\htdocs\SINEMKT\Model\LoginModel.php';
+include 'Model/LoginModel.php';
 
 echo "login controller";
 

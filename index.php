@@ -1,15 +1,15 @@
 <?php
-// define("PROJ_DIR", dirname(__FILE__));
+//define("PROJ_DIR", dirname(__FILE__));
 
 session_start();
-include_once 'C:\xampp\htdocs\SINEMKT\Model\ProduitModel.php';
-include_once 'C:\xampp\htdocs\SINEMKT\Model\LoginModel.php';
-include_once 'C:\xampp\htdocs\SINEMKT\Controller\ProduitController.php';
-include_once 'C:\xampp\htdocs\SINEMKT\ControllerLoginController.php';
+require_once 'Controller/ProduitController.php';
+require_once 'Controller/LoginController.php';
+require_once 'Model/ProduitModel.php';
+require_once 'Model/LoginModel.php';
 
 $ProduitController = new ProduitController();
 $LoginModel = new LoginModel();
-$loginController = new LoginController();
+$loginController = new LoginController;
 
 if($_GET['c'] === "login"){
     $login = $_POST["login"];

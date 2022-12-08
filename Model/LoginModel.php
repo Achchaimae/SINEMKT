@@ -1,5 +1,5 @@
 <?php
-include_once  'C:\xampp\htdocs\SINEMKT\Model\DataBase.php';
+include_once  'classes/DataBase.php';
 class LoginModel extends dbh{
 
     public function checkLogin($login,$password){
