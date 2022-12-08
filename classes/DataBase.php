@@ -11,5 +11,6 @@ class Dbh {
         $pdo = new PDO($dsn,$this->user,$this->pwd);
         $pdo ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $pdo;
+        
     }
 }

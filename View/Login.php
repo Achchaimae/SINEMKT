@@ -182,7 +182,7 @@
 
         <!--feature start -->
         <section id="feature" class="feature">
-            <form action="../index.php?c=login" method="POST" class="form-container">
+            <form action="../index.php" method="POST" class="form-container">
 
                 <input type="email" name="email" placeholder="email"><br>
                 <input type="password" name="password" placeholder="password"><br>

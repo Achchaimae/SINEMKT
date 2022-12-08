@@ -1,15 +1,22 @@
 <?php
 //login controller
+
 include 'Model/LoginModel.php';
 
-echo "login controller";
 
-class LoginController {
-    protected $login;
-    public function __construct(){
-        $this->login = new LoginModel();
-    }
-    public function checkLogin($login,$password){
-        $this->login->checkLogin($login,$password);
+class LoginController extends LoginModel {
+    
+
+    public function direction($login,$password){
+        echo "hello";
+        $log = new LoginModel();
+        $results=$this->checkLogin($login,$password);
+        
+        if(!$results){
+            header('location: View/login.php');
+        }
+        else{
+            header('location: View/admin.php');
+        }
     }
 }
