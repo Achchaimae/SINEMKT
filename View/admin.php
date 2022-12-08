@@ -1,3 +1,9 @@
+<?php 
+ include '../Controller/ProduitController.php';
+    $produit = new ProduitController();
+    $listproduit = $produit->listproduit();
+    
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +13,24 @@
     <title>Admin</title>
 </head>
 <body>
-hello world ??
+<?php  foreach($listproduit as $key=>$value){ ?>
+        <div>
+            <?= $value['id'] ?>
+            <h1><?php echo $value['nom'] ?></h1>
+            <h2><?php echo $value['prix'] ?></h2>
+            <h3><?php echo $value['quantite'] ?></h3>
+            <h4><?php echo $value['description'] ?></h4>
+            <img src="<?php echo $value['image'] ?>" >
+            <button><a href="update.php?id=<?php echo $value["id"];?>">update</a></button>
+            <button><a href="../index.php?id=<?php echo $value["id"];?>" name="delete">supprimer</a></button>
+           
+        </div>
+<?php  }
+?>
+       
+        <! <button><a href="Ajouter.php">ajouter</a></button>
+        <button><a href="Modifier.php">modifier</a></button> -->
+       
+    
 </body>
 </html>
