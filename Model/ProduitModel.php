@@ -2,7 +2,7 @@
 include_once 'C:\xampp\htdocs\SINEMKT\classes\DataBase.php';
 class Produit extends dbh{
 
-    public function AjouterProduit($nom,$prix,$quantite,$description,$image){
+    public function Ajouter($nom,$prix,$quantite,$description,$image){
         $sql = "insert into produit (nom,prix,quantite,description,image) values(?,?,?,?,?)";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute([$nom,$prix,$quantite,$description,$image]);
@@ -18,17 +18,17 @@ class Produit extends dbh{
     }
 
     public function getproduit($id){
-        $sql = "select * from produit where id=?";
+        $sql = "SELECT * FROM produit WHERE id=?";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute([$id]);
         $results = $stmt->fetch();
         return $results;
     }
+    //update data
     public function updateproduit($id,$nom,$prix,$quantite,$description,$image){
-        $sql = "update produit set nom=$nom,prix=$prix,quantite=$quantite,description=$description,image=$image where id=$id";
+        $sql = "UPDATE produit SET nom=?,prix=?,quantite=?,description=?,image=? WHERE id=?";
         $stmt = $this->connect()->prepare($sql);
-        $stmt->execute();
-        return $id;
+        $stmt->execute([$nom,$prix,$quantite,$description,$image,$id]);
     }
    
     public function deleteproduit($id){
