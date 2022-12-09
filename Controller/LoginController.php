@@ -12,10 +12,10 @@ class LoginController extends LoginModel {
         $results=$this->checkLogin($login,$password);
         
         if(!$results){
-            header('location: View/login.php');
+           return false;
         }
         else{
-            header('location: View/admin.php');
+            return true;
         }
     }
 }
