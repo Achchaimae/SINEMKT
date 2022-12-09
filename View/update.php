@@ -1,4 +1,9 @@
-
+<?php 
+require_once '../Controller/ProduitController.php';
+    $produit = new prodController();
+    $listproduit = $produit->listproduit();
+    
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,15 +12,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update</title>
 </head>
-<body>
-    <form action="../index.php?id=<?php echo $value["id"];?>" method="POST" >
-    <?php print $value['id'] ?>
-        <input type="text" name="nom" placeholder="nom" value="" >
-        <input type="number" name="prix" placeholder="prix" >
-        <input type="number" name="quantite" placeholder="quantite">
-        <textarea name="description" cols="30" rows="10" placeholder="description"></textarea>
-        <input type="file" name="image" placeholder="image">
-        <input type="submit" name="update" value="update" >
-    </form>
+<body>      
+   
+    
+<?php  foreach($listproduit as $key=>$value){ ?>
+            <form action="../index.php" method="POST">
+            <input type="hidden" name="id" value="<?php echo $value['id'] ?>">
+            <input type="text" name="nom" placeholder="nom" value="<?php echo $value['nom'] ?>">
+            <input type="number" name="prix" placeholder="prix" value="<?php echo $value['prix'] ?>">
+            <input type="number" name="quantite" placeholder="quantite" value="<?php echo $value['quantite'] ?>">
+            <textarea name="description"  cols="30" rows="10" placeholder="description"><?php echo $value['description'] ?></textarea>
+            <input type="file" name="image" placeholder="image" src="<?php echo $value['image'] ?>">
+            <input type="submit" name="update" value="update">
+        </form>
+        
+<?php  }
+?>
 </body>
 </html>
