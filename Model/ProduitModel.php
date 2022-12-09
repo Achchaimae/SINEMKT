@@ -24,13 +24,6 @@ class Produit extends dbh{
         $results = $stmt->fetch();
         return $results;
     }
-    //update produit
-    // public function updateproduit($id,$nom,$prix,$quantite,$description,$image){
-    //     $sql = "update produit set nom=?,prix=?,quantite=?,description=?,image=? where id=?";
-    //     $stmt = $this->connect()->prepare($sql);
-    //     $stmt->execute([$nom,$prix,$quantite,$description,$image,$id]);
-    // }
-   //end update produit
     public function updateproduit($id,$nom,$prix,$quantite,$description,$image){
         $sql = "update produit set nom=$nom,prix=$prix,quantite=$quantite,description=$description,image=$image where id=$id";
         $stmt = $this->connect()->prepare($sql);
