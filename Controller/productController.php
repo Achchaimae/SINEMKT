@@ -2,13 +2,14 @@
 include_once 'C:\xampp\htdocs\SINEMKT\Model\ProduitModel.php';
 
 
-class ProduitController{
+class prodController{
+
     protected $produit;
     public function __construct(){
         $this->produit = new Produit();
     }
     public function AjouterProduit($nom,$prix,$quantite,$description,$image){
-        $this->produit->AjouterProduit($nom,$prix,$quantite,$description,$image);
+        $this->produit->Ajouter($nom,$prix,$quantite,$description,$image);
     }
     public function listproduit(){
         return $this->produit->listproduit();
