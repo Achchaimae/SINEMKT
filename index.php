@@ -13,12 +13,12 @@ $loginController = new LoginController;
 
 
 //test login
-if(isset($_POST["email"])){
+if(isset($_POST["email"])&&isset($_POST["password"])){
 
     $login = $_POST["email"];
     $password = $_POST["password"];
     
-    
+
      $loginController-> direction($login,$password);
 
   
