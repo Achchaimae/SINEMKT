@@ -1,10 +1,8 @@
 <?php 
-    // session_start();
-    // if(!isset($_SESSION['login'])){
-    //     header('Location: ../View/login.php');
-    // }else{
-    //     echo "welcome ";
-    //     die();
+    session_start();
+    if(!isset($_SESSION['login'])){
+        header('Location: ../View/login.php');
+    }
         include ('../Controller/productController.php');
         $produit = new prodController();
         $listproduit = $produit->listproduit();
@@ -27,9 +25,12 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="assets/css/style .css">
+<link rel="stylesheet" href="assets/css/style .css"> 
+<link rel="stylesheet" href="../assets/css/mystyle.css">
 </head>
 <body>
+    <button class="logout"> <a href="../index.php?a=log">logout</a></button>
+    
     <div class="container">
         <div class="table-responsive">
             <div class="table-wrapper">
@@ -60,7 +61,7 @@
                     <?php  foreach($listproduit as $key=>$value){ ?>
                         <tr>
                             <td><?php echo $value['id'] ?></td>
-                            <td> <img src="<?php echo $value['image'] ?>" ></td>
+                            <td class="product-img"> <img src="../<?php echo $value['image'] ?>" ></td>
                             <td><?php echo $value['nom'] ?></td>
                             <td><?php echo $value['prix'] ?></td>
                             <td><?php echo $value['quantite'] ?></td>
@@ -75,7 +76,7 @@
                         ?>
        
                     </tbody>
-                    <button><a href="Ajouter.php">ajouter</a></button> 
+                    <button class="add-btn"><a href="Ajouter.php">ajouter</a></button> 
                 </table>
             </div>
         </div>        

@@ -18,4 +18,9 @@ class LoginController extends LoginModel {
             return true;
         }
     }
+    public function logout(){
+        session_start();
+        session_destroy();
+        
+    }
 }

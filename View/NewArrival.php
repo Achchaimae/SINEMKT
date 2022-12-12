@@ -1,3 +1,7 @@
+<?php  include ('../Controller/productController.php');
+        $produit = new prodController();
+        $listproduit = $produit->listproduit();
+		?>
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -358,6 +362,33 @@
 								<p class="arrival-product-price">$140.00</p>
 							</div>
 						</div>
+
+						<?php  foreach($listproduit as $key=>$value){ ?>
+						<div class="col-md-3 col-sm-4">
+							<div class="single-new-arrival">
+								<div class="single-new-arrival-bg">
+									<img src="../<?php echo $value['image'] ?>" alt="new-arrivals images">
+									<div class="single-new-arrival-bg-overlay"></div>
+									<div class="sale bg-1">
+										<p>sale</p>
+									</div>
+									<div class="new-arrival-cart">
+										<p>
+											<span class="lnr lnr-cart"></span>
+											<a href="#">add <span>to </span> cart</a>
+										</p>
+										<p class="arrival-review pull-right">
+											<span class="lnr lnr-heart"></span>
+											<span class="lnr lnr-frame-expand"></span>
+										</p>
+									</div>
+								</div>
+								<h4><a href="#"><?php echo $value['nom'] ?></a></h4>
+								<p class="arrival-product-price">$ <?php echo $value['prix'] ?></p>
+							</div>
+						</div>
+						<?php  }
+                        ?>
 					</div>
 				</div>
 			</div><!--/.container-->

@@ -11,24 +11,31 @@ $ProduitController = new prodController();
 $LoginModel = new LoginModel();
 $loginController = new LoginController;
 
-
+if(isset($_GET["a"])){
+    if($_GET["a"]=="log"){
+        $loginController->logout();
+        require_once 'View/home.php';
+    }
+}
 
 //test login
  if(isset($_POST["email"])&&isset($_POST["password"])){
 //     echo "inside";
-
+session_start();
    $login = $_POST["email"];
    $password = $_POST["password"];
    $loginController->direction($login,$password);
   if($loginController==true){
-     echo "login success";    
-          include_once "View/admin.php";
-    }
-}
-    else{
-            echo "login failed";
+    $_SESSION["login"] = $login;
+    header("location:View/admin.php");
+        //   include_once "View/admin.php";
+    }else{
              include_once "View/home.php";
     }
+}else{
+    include_once "View/home.php";
+}
+    
 
 
 
@@ -36,18 +43,20 @@ $loginController = new LoginController;
 
 //login
 
- 
+    
+    
  
     // var_dump($_POST);
     // var_dump($_SESSION);
-    var_dump($_GET);
+  
     //ajouter
-    if(isset($_POST["ajouter"])){        
+    if(isset($_POST["ajouter"])){   
+        $test = new prodController();  
         $nom = $_POST["nom"];
         $prix = $_POST["prix"];
         $quantite = $_POST["quantite"];
         $description = $_POST["description"];
-        $image = $_POST["image"];
+        $image= $test->addPic();
         $ProduitController->AjouterProduit($nom,$prix,$quantite,$description,$image);
        require_once 'View/admin.php';
    }
@@ -61,6 +70,7 @@ $loginController = new LoginController;
         $image = $_POST["image"];
     $ProduitController->updateproduit($id,$nom,$prix,$quantite,$description,$image);
     require_once 'View/admin.php';
+    
     }
     //delete
     
