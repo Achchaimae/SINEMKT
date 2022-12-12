@@ -13,7 +13,7 @@ class Produit extends dbh{
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute();
         
-       return $stmt;
+       return $stmt->fetchAll();
         
     }
 

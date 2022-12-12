@@ -1,5 +1,5 @@
 <?php 
-require_once '../Controller/ProduitController.php';
+ include ('../Controller/productController.php');
     $produit = new prodController();
     $listproduit = $produit->listproduit();
     
