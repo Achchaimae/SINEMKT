@@ -24,8 +24,8 @@ if(isset($_GET["a"])){
 session_start();
    $login = $_POST["email"];
    $password = $_POST["password"];
-   $loginController->direction($login,$password);
-  if($loginController==true){
+   $test=$loginController->direction($login,$password);
+  if($test){
     $_SESSION["login"] = $login;
     header("location:View/admin.php");
         //   include_once "View/admin.php";
